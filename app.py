@@ -6,6 +6,21 @@ app = Flask(__name__)
 
 CORS(app)
 
+import os
+from flask import send_from_directory
+
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
+
+@app.route('/css/<path:filename>')
+def css(filename):
+    return send_from_directory('css', filename)
+
+@app.route('/js/<path:filename>')
+def js(filename):
+    return send_from_directory('js', filename)
+
 database.criar_tabelas()
 
 @app.route('/api/transacoes', methods=['GET'])
