@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://financeboard-0wgo.onrender.com/api';
 
 const elSaldo        = document.getElementById('valor-saldo');
 const elEntradas     = document.getElementById('valor-entradas');
